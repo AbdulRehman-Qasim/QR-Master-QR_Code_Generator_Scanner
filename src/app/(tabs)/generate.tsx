@@ -66,7 +66,7 @@ export default function Generate() {
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <ScrollView 
         style={[styles.container, { backgroundColor: theme.background }]}
-        contentContainerStyle={{ paddingBottom: Math.max(insets.bottom, spacing.xxl) + 80, paddingTop: Math.max(insets.top, spacing.lg) }}
+        contentContainerStyle={{ paddingBottom: Math.max(insets.bottom, spacing.xxl) + 120, paddingTop: Math.max(insets.top, spacing.lg) }}
         showsVerticalScrollIndicator={false}
       >
         <Animated.View entering={FadeInUp.springify()} style={styles.header}>

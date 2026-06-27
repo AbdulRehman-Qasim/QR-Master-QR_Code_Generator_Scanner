@@ -12,9 +12,11 @@ export default function TabLayout() {
   const insets = useSafeAreaInsets();
   
   // Dynamically calculate bottom offset
-  // We use a fixed tight margin of 8px on Android to guarantee it never floats into space 
-  // regardless of buggy OEM safe area insets on gesture navigation.
-  const bottomMargin = Platform.OS === 'ios' ? Math.max(insets.bottom, 20) : 8;
+  // We add the safe area bottom inset (which represents the 3-button navigation height)
+  // plus a tiny padding so it floats nicely on all devices.
+  const bottomMargin = Platform.OS === 'ios' 
+    ? Math.max(insets.bottom, 20) 
+    : 16;
 
   return (
     <Tabs 
@@ -127,7 +129,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 22,
-    top: Platform.OS === 'ios' ? 20 : 16,
   },
   fabWrapper: {
     width: 60,

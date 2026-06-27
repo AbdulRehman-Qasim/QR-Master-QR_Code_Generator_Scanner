@@ -37,7 +37,7 @@ export default function History() {
         data={history}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: Math.max(insets.bottom, spacing.xxl) + 80 }}
+        contentContainerStyle={[styles.listContent, { paddingBottom: Math.max(insets.bottom, spacing.xxl) + 120 }]}
         renderItem={({ item, index }) => (
           <Animated.View entering={FadeInDown.delay(index * 50).springify()}>
             <Pressable 
