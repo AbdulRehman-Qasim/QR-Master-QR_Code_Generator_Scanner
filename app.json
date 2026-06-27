@@ -50,7 +50,10 @@
       "tsconfigPaths": true
     },
     "extra": {
-      "router": {}
+      "router": {},
+      "eas": {
+        "projectId": "c9ed8c3a-bcce-4b31-a4ee-25a8e1a7b0ab"
+      }
     }
   }
 }
